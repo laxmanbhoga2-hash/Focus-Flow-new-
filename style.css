@@ -1,0 +1,193 @@
+/* ============================================================
+   FOCUSFLOW V12 — Global SaaS UI System
+      Premium Depth • Micro Interactions • Performance Tuned
+         Colors & Structure Preserved
+            ============================================================ */
+
+            /* ================= ROOT TOKENS ================= */
+
+            :root {
+              --r:#d42020;
+                --rb:#ff2828;
+                  --rg:rgba(212,32,32,0.55);
+                    --rd:rgba(212,32,32,0.12);
+                      --rbr:rgba(212,32,32,0.75);
+
+                        --bg:#0c0c0c;
+                          --bg2:#111;
+                            --bg3:#161616;
+                              --bg4:#1c1c1c;
+                                --bg5:#202020;
+
+                                  --t:#efefef;
+                                    --td:#808080;
+                                      --tf:#363636;
+                                        --w:#fff;
+
+                                          --radius:6px;
+                                            --smooth:all .28s cubic-bezier(.4,0,.2,1);
+                                            }
+
+                                            /* ================= GLOBAL RESET ================= */
+
+                                            *{
+                                              margin:0;
+                                                padding:0;
+                                                  box-sizing:border-box;
+                                                  }
+
+                                                  html,body{
+                                                    height:100%;
+                                                      background:var(--bg);
+                                                        color:var(--t);
+                                                          font-family:'Barlow',sans-serif;
+                                                            overflow:hidden;
+                                                            }
+
+                                                            /* ================= DEPTH SYSTEM ================= */
+
+                                                            .card,
+                                                            .t-card,
+                                                            .sbox,
+                                                            .ch-card {
+                                                              border-radius:var(--radius);
+                                                                transition:var(--smooth);
+                                                                  will-change:transform;
+                                                                  }
+
+                                                                  .card:hover,
+                                                                  .t-card:hover,
+                                                                  .sbox:hover{
+                                                                    transform:translateY(-6px);
+                                                                      box-shadow:
+                                                                          0 15px 40px rgba(212,32,32,0.18),
+                                                                              0 0 0 1px rgba(212,32,32,0.2) inset;
+                                                                              }
+
+                                                                              /* ================= PREMIUM BUTTON SYSTEM ================= */
+
+                                                                              .btn-main{
+                                                                                transition:var(--smooth);
+                                                                                  position:relative;
+                                                                                    overflow:hidden;
+                                                                                    }
+
+                                                                                    .btn-main::before{
+                                                                                      content:'';
+                                                                                        position:absolute;
+                                                                                          inset:0;
+                                                                                            background:linear-gradient(
+                                                                                                120deg,
+                                                                                                    transparent 30%,
+                                                                                                        rgba(255,255,255,.2),
+                                                                                                            transparent 70%
+                                                                                                              );
+                                                                                                                transform:translateX(-100%);
+                                                                                                                  transition:.6s;
+                                                                                                                  }
+
+                                                                                                                  .btn-main:hover::before{
+                                                                                                                    transform:translateX(100%);
+                                                                                                                    }
+
+                                                                                                                    .btn-main:hover{
+                                                                                                                      box-shadow:0 0 70px rgba(212,32,32,0.6);
+                                                                                                                        transform:translateY(-2px);
+                                                                                                                        }
+
+                                                                                                                        /* ================= TIMER ENHANCEMENT ================= */
+
+                                                                                                                        .ring-prog{
+                                                                                                                          transition:stroke-dashoffset 1s linear, filter .3s ease;
+                                                                                                                          }
+
+                                                                                                                          .t-card.active-focus .ring-prog{
+                                                                                                                            filter:drop-shadow(0 0 20px var(--r));
+                                                                                                                            }
+
+                                                                                                                            /* ================= NAVIGATION POLISH ================= */
+
+                                                                                                                            .bot-nav{
+                                                                                                                              backdrop-filter:blur(14px);
+                                                                                                                                background:rgba(17,17,17,0.85);
+                                                                                                                                  border-top:1px solid rgba(212,32,32,0.15);
+                                                                                                                                  }
+
+                                                                                                                                  .nav-b{
+                                                                                                                                    transition:var(--smooth);
+                                                                                                                                    }
+
+                                                                                                                                    .nav-b:hover{
+                                                                                                                                      color:var(--r);
+                                                                                                                                        transform:translateY(-2px);
+                                                                                                                                        }
+
+                                                                                                                                        /* ================= ACHIEVEMENT GLOW ================= */
+
+                                                                                                                                        .ach.on{
+                                                                                                                                          animation:achPulse 1.6s infinite alternate;
+                                                                                                                                          }
+
+                                                                                                                                          @keyframes achPulse{
+                                                                                                                                            from{box-shadow:0 0 8px rgba(212,32,32,0.3);}
+                                                                                                                                              to{box-shadow:0 0 25px rgba(212,32,32,0.8);}
+                                                                                                                                              }
+
+                                                                                                                                              /* ================= SESSION HISTORY ================= */
+
+                                                                                                                                              .hist-row{
+                                                                                                                                                display:flex;
+                                                                                                                                                  justify-content:space-between;
+                                                                                                                                                    padding:10px 0;
+                                                                                                                                                      border-bottom:1px solid rgba(212,32,32,0.2);
+                                                                                                                                                        font-size:13px;
+                                                                                                                                                          color:var(--td);
+                                                                                                                                                            transition:var(--smooth);
+                                                                                                                                                            }
+
+                                                                                                                                                            .hist-row:hover{
+                                                                                                                                                              color:var(--r);
+                                                                                                                                                                transform:translateX(4px);
+                                                                                                                                                                }
+
+                                                                                                                                                                /* ================= SCROLL IMPROVEMENT ================= */
+
+                                                                                                                                                                .scroll{
+                                                                                                                                                                  scrollbar-width:none;
+                                                                                                                                                                  }
+
+                                                                                                                                                                  .scroll::-webkit-scrollbar{
+                                                                                                                                                                    display:none;
+                                                                                                                                                                    }
+
+                                                                                                                                                                    /* ================= MICRO ANIMATIONS ================= */
+
+                                                                                                                                                                    .screen{
+                                                                                                                                                                      transition:opacity .35s ease, transform .35s ease;
+                                                                                                                                                                      }
+
+                                                                                                                                                                      .screen.active{
+                                                                                                                                                                        transform:translateY(0);
+                                                                                                                                                                        }
+
+                                                                                                                                                                        .screen:not(.active){
+                                                                                                                                                                          transform:translateY(18px);
+                                                                                                                                                                          }
+
+                                                                                                                                                                          /* ================= XP BAR PREMIUM ================= */
+
+                                                                                                                                                                          .xp-fill{
+                                                                                                                                                                            transition:width .6s ease;
+                                                                                                                                                                              box-shadow:0 0 15px rgba(212,32,32,0.6);
+                                                                                                                                                                              }
+
+                                                                                                                                                                              /* ================= DISCIPLINE SCORE RING ================= */
+
+                                                                                                                                                                              .score-ring{
+                                                                                                                                                                                transition:var(--smooth);
+                                                                                                                                                                                }
+
+                                                                                                                                                                                .score-ring:hover{
+                                                                                                                                                                                  box-shadow:0 0 30px rgba(212,32,32,0.6);
+                                                                                                                                                                                    transform:scale(1.05);
+                                                                                                                                                                                    }
